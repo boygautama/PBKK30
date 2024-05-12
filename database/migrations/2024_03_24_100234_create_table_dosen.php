@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('tb_dosen', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->string('nidn')->unique();
             $table->string('nama_dosen');
             $table->text('alamat');
